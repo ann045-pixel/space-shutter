@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🚀 Космический шутер</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score">⭐ <span id="score">0</span></div>
+            <div class="lives">❤️❤️❤️</div>
+            <div class="level">Уровень <span id="level">1</span></div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="startScreen" class="screen active">
+            <h1>🚀 Космический шутер</h1>
+            <button id="startButton" class="btn">Начать игру</button>
+        </div>
+        
+        <div id="gameOverScreen" class="screen">
+            <h2>👾 Игра окончена</h2>
+            <p>Ваш счёт: <span id="finalScore">0</span></p>
+            <button id="restartButton" class="btn">Играть снова</button>
+        </div>
+    </div>
+
+    <!-- ===== ЭКРАН ПАУЗЫ ===== -->
+<div id="pauseScreen" class="screen">
+    <h2>⏸️ ПАУЗА</h2>
+    <button id="resumeButton" class="btn">Продолжить</button>
+    <button id="restartFromPauseButton" class="btn">Заново</button>
+    <button id="quitButton" class="btn">Выход</button>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
