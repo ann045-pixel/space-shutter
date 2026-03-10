@@ -22,13 +22,13 @@ let gameState = {
     score: 0,
     level: 1,
     lives: 3,
-    enemies: [],        // Вместо eggs - враги
-    bullets: [],        // НОВОЕ - массив пуль
-    ufoX: canvas.width / 2 - 25,  // Вместо basketX - позиция ракеты
+    enemies: [],        
+    bullets: [],       
+    ufoX: canvas.width / 2 - 25,  
     enemySpawnTimer: 0,
     ENEMY_SPAWN_INTERVAL: 20,
-    bulletSpawnTimer: 0,     // НОВОЕ - таймер для стрельбы
-    BULLET_SPAWN_INTERVAL: 15 // НОВОЕ - каждые 15 кадров пуля
+    bulletSpawnTimer: 0,     
+    BULLET_SPAWN_INTERVAL: 15 
 };
 
 // ==================== ЭЛЕМЕНТЫ ИНТЕРФЕЙСА ====================
@@ -46,7 +46,7 @@ const restartFromPauseButton = document.getElementById('restartFromPauseButton')
 const quitButton = document.getElementById('quitButton')
 
 // ==================== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ====================
-let animationFrameId = null;  // Сюда будем сохранять ID игрового цикла
+let animationFrameId = null;  
 
 // ==================== УПРАВЛЕНИЕ ====================
 canvas.addEventListener('mousemove', (e) => {
@@ -125,7 +125,7 @@ function spawnEnemy() {
 
 // ==================== СОЗДАНИЕ ПУЛИ С НАПРАВЛЕНИЕМ ====================
 function spawnBulletWithTarget(targetX, targetY) {
-    // Позиция НЛО (откуда стреляем)
+    // Позиция НЛО
     const fromX = gameState.ufoX + 22;
     const fromY = canvas.height - 70;
     
@@ -404,4 +404,5 @@ function startGame() {
 
 // ==================== КНОПКИ ====================
 if (startButton) startButton.addEventListener('click', startGame);
+
 if (restartButton) restartButton.addEventListener('click', startGame);
